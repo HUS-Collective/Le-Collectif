@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: path.resolve(__dirname, "./client/index.js"), // main js
+  entry: path.resolve(__dirname, "./client/index.tsx"), // main js
   output: {
     path: path.resolve(__dirname, "./build"), // output folder
     publicPath: "/",
@@ -54,6 +54,17 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: ['file-loader'],
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(jpg|jpeg|png)$/,
+        use: {
+          loader: 'url-loader'
+        }
+      }
     ],
   },
   resolve: {

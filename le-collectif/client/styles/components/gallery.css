@@ -1,0 +1,18 @@
+.gallery-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item {
+  max-height: 25vh;
+  border: border dotted blue;
+}
+.grid-item img {
+  width: auto;
+  height: 80%;
+}
+
+.gallery-photo-info {
+  display: flex;
+}/*# sourceMappingURL=gallery.css.map */
