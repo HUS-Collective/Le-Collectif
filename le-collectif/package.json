@@ -10,19 +10,35 @@
     "@types/node": "^16.11.66",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+<<<<<<< HEAD
     "node-sass": "^7.0.3",
+=======
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "pg": "^8.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+>>>>>>> dev
     "react-scripts": "5.0.1",
     "request": "^2.79.0",
     "url-loader": "^3.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon index.html ",
     "dev": "webpack-dev-server",
     "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "scss": "node-sass --watch main -o main"
+=======
+    "start": "NODE_ENV=production nodemon server/server.js & webpack-dev-server --mode development --open --hot",
+    "dev": "NODE_ENV=development webpack serve --open",
+    "build": "NODE_ENV=production webpack",
+    "test": "react-scripts test"
+>>>>>>> dev
   },
   "eslintConfig": {
     "extends": [

@@ -1,11 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  mode: "development",
-  entry: "./client/index.tsx", // main js
+  mode: process.env.NODE_ENV,
+  entry: path.resolve(__dirname, "./client/index.tsx"), // main js
   output: {
-    path: path.resolve(__dirname, "dist"), // output folder
+    path: path.resolve(__dirname, "./build"), // output folder
     publicPath: "/",
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "./build"),
+      publicPath: "/",
+    },
+    proxy: {
+      "/api/": "http://localhost:3000",
+    },
+    host: "localhost",
+    port: 8080,
+    hot: true,
   },
   module: {
     rules: [
@@ -50,9 +62,9 @@ module.exports = {
       {
         test: /\.(jpg|jpeg|png)$/,
         use: {
-         loader: 'url-loader'
+          loader: 'url-loader'
         }
-       }       
+      }
     ],
   },
   resolve: {
