@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react'
 
-
-function Title() {
-
-    return (
-        <div className="Title">
-            
-        </div>
-    );
-
+type Props = {
+  photoName: string,
+  artistName: string
 }
+
+const Title = (props: Props) => {
+  return (
+    <div>
+      <h1>{props.photoName}</h1>
+      <h3>{props.artistName}</h3>
+      </div>
+  )
+}
+
 export default Title;
