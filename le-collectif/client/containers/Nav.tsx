@@ -9,8 +9,8 @@ const Nav = () => {
         </div>
       </Link>
         <div id='nav-items'>
-          <Link to={"/cart"}><h5>cart</h5></Link>
-          <Link to={"/signUp"}><h5>sign in</h5></Link>
+          <Link style={{textDecoration: 'none', color: 'whitesmoke'}} to={"/cart"}><h5 className='nav-item'>cart</h5></Link>
+          <Link style={{textDecoration: 'none', color: 'whitesmoke'}} to={"/signUp"}><h5 className='nav-item'>sign in</h5></Link>
       </div>  
     </div>
   )

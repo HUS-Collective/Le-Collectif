@@ -9,6 +9,7 @@
   width: 100%;
   position: fixed;
   padding: 1rem;
+  background-color: rgba(25, 25, 25, 0.8);
     h2 {
       margin: 0px;
       font-size: 3rem;
@@ -22,10 +23,22 @@
 }
 
 #nav-items {
-  padding-right: 2rem;
+  padding-right: 2.5rem;
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
 }
 
 #logo {
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.nav-item {
+  &:hover {
+    opacity: 0.6;
+  }
   &:active {
     transform: translateY(2px);
   }
