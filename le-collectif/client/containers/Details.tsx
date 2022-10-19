@@ -8,22 +8,27 @@ import PhotoProps from "../types/photoProps";
 
 // this will need props so it renders a specific image
 function Details(props: PhotoProps) {
-    // make this dynamic
+    // make this dynamic, replace staticData props
     const staticData = DATA.PHOTOS[0];
+    console.log(staticData);  
   return (
-    <div className="image-and-details">
+    <div className="details-page-container">
       <Title 
         photoName={staticData.photoName} 
         artistName={staticData.artistName} />
-      <ImageContainer 
-        imgPath={staticData.imgPath}
-        photoName={staticData.photoName}
-        photoId={`${staticData.photoId}`}
-        key={staticData.photoId} />
-      <DetailsContainer 
-        imgPath={staticData.imgPath}
-        photoName={staticData.photoName}
-        price={staticData.price} />
+      <div id='image-and-details-container'>
+        <ImageContainer 
+          imgPath={staticData.imgPath}
+          photoName={staticData.photoName}
+          photoId={`${staticData.photoId}`}
+          key={staticData.photoId} 
+          componentName={'details'} />
+        <DetailsContainer 
+          imgPath={staticData.imgPath}
+          photoName={staticData.photoName}
+          photoId={`${staticData.photoId}`}
+          price={staticData.price} />
+      </div>
     </div>
   );
 }

@@ -18,6 +18,7 @@ const GalleryContainer = () => {
               imgPath={photo.imgPath} 
               photoName={photo.photoName} 
               photoId={`${photo.photoId}`} 
+              componentName='gallery'
               key={photo.photoId} />
             < GalleryImageDetails 
               photoName={photo.photoName} 

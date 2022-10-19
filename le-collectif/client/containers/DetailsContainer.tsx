@@ -1,16 +1,11 @@
 import React from 'react'
+import PhotoProps from '../types/photoProps';
 
-type imageDetailProps = {
-  imgPath: string,
-  photoName: string,
-  price: number,
-}
-
-const DetailsContainer = (props: imageDetailProps) => {
+const DetailsContainer = (props: PhotoProps) => {
   return (
-    <div>
+    <div className='details-name-price' id={`details-container-photo-${props.photoId}`}>
       <h2>{props.photoName}</h2>
-      <h3>{props.price}</h3>
+      <h3>${props.price}</h3>
     </div>
   )
 }
