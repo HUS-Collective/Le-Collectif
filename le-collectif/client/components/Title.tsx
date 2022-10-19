@@ -1,16 +1,12 @@
 import React from 'react'
+import photoProps from '../types/photoProps';
 
-type Props = {
-  photoName: string,
-  artistName: string
-}
-
-const Title = (props: Props) => {
+const Title = (props: photoProps) => {
   return (
     <div>
       <h1>{props.photoName}</h1>
       <h3>{props.artistName}</h3>
-      </div>
+    </div>
   )
 }
 

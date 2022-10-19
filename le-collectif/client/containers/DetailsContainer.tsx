@@ -1,12 +1,7 @@
 import React from 'react'
+import photoProps from '../types/photoProps';
 
-type imageDetailProps = {
-  imgPath: string,
-  photoName: string,
-  price: number,
-}
-
-const DetailsContainer = (props: imageDetailProps) => {
+const DetailsContainer = (props: photoProps) => {
   return (
     <div>
       <h2>{props.photoName}</h2>

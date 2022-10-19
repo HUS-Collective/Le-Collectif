@@ -1,8 +1,7 @@
 import React from 'react'
+import photoProps from '../types/photoProps';
 
-type Props = {}
-
-const PurchaseBox = (props: Props) => {
+const PurchaseBox = (props: photoProps) => {
   // add the subcomponents to this too!
   return (
     <div>PurchaseBox</div>

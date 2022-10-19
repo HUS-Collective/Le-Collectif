@@ -1,15 +1,15 @@
 import React from "react";
 import Nav from "./Nav";
 
-function Cart() {
+function Credential() {
 
     return (
-        <div className="App">
+        <div className="Credential">
             <div>
                 <Nav />
             </div>
-            <h1>Cart</h1>
+            <h1>Credntials Page</h1>
         </div>
     );
 }
-export default Cart;
+export default Credential;
