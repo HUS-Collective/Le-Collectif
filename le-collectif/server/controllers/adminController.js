@@ -44,7 +44,9 @@ adminController.getPhotos = async (req, res, next) => {
 
 adminController.getAPic = async (req, res, next) => {
   try {
-    const { photo_ID } = req.params;
+    const photo_ID = req.params.id;
+    console.log("this is req.params", req.params);
+    console.log("this is req.params.id", req.params.id);
     //const photo = `SELECT * FROM photos WHERE photo_ID =${photo_ID}`;
     console.log("this is at this point");
 
