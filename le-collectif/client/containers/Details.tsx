@@ -3,9 +3,11 @@ import Title from "../components/Title";
 import DetailsContainer from "./DetailsContainer";
 import ImageContainer from "./ImageContainer";
 import DATA from '../models/mockdata';
+import PhotoProps from "../types/photoProps";
+
 
 // this will need props so it renders a specific image
-function Details() {
+function Details(props: PhotoProps) {
     // make this dynamic
     const staticData = DATA.PHOTOS[0];
   return (
