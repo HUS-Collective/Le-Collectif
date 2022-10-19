@@ -13,8 +13,6 @@ function App() {
       <Nav />
       <LandingPage />
       <GalleryPage />
-      <Details />
-      {/* <Cart /> */}
     </Fragment>
   );
 }

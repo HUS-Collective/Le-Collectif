@@ -25,9 +25,7 @@ const Carousel = () => {
       { photos.map((photo, index) => {
         return <div className='carousel-item' style={{transform: `translate(-${currentIndex *100}%)`}}
         key={index}>
-          < ImageContainer 
-            imgPath={photo.imgPath}
-            photoId={`${photo.photoId}`}
+          <img src={photo.imgPath}
           />
         </div>
       })
