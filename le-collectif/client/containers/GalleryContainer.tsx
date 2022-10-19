@@ -16,14 +16,11 @@ const GalleryContainer = () => {
         return (
           <div className={`grid-item`} id={`photo-${photo.photoId}`}>
             < ImageContainer
-              artistName={photo.artistName}
-              count={photo.count}
               imgPath={photo.imgPath}
               photoName={photo.photoName}
               photoId={`${photo.photoId}`}
-              key={photo.photoId}
-              price={photo.price}
-              views={photo.views} />
+              componentName='gallery'
+              key={photo.photoId} />
             < GalleryImageDetails
               photoName={photo.photoName}
               artistName={photo.artistName}

@@ -1,15 +1,20 @@
 import React from "react";
 import Nav from "./Nav";
+import CartContainer from '../components/CartContainer';
+import PaymentContainer from '../components/PaymentContainer';
 
-function Cart() {
+type Props = {}
 
+const Cart = (props: Props) => {
     return (
-        <div className="App">
+        <div className='cart-page'>
             <div>
                 <Nav />
             </div>
-            <h1>Cart</h1>
+            < CartContainer />
+            < PaymentContainer />
         </div>
-    );
+    )
 }
+
 export default Cart;

@@ -29,11 +29,13 @@ function Details(props: PhotoProps) {
         imgPath={locationState ? locationState.imgPath : staticData.imgPath}
         photoName={locationState ? locationState.photoName : staticData.photoName}
         photoId={locationState ? `${locationState.photoId}` : `${staticData.photoId}`}
-        key={locationState ? locationState.photoId : staticData.photoId} />
+        key={locationState ? locationState.photoId : staticData.photoId}
+        componentName={'details'} />
       <DetailsContainer
         imgPath={locationState ? locationState.imgPath : staticData.imgPath}
         photoName={locationState ? locationState.photoName : staticData.photoName}
-        price={locationState ? locationState.price : staticData.price} />
+        price={locationState ? locationState.price : staticData.price}
+        photoId={locationState ? `${locationState.photoId}` : `${staticData.photoId}`} />
       <Link to="/cart" state={{
         photoName: locationState ? locationState.photoName : staticData.photoName,
         artistName: locationState ? locationState.artistName : staticData.artistName,

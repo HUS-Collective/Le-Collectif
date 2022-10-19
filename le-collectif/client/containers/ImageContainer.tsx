@@ -1,13 +1,15 @@
 import { FC } from 'react';
 import React from 'react';
-import photoProps from '../types/photoProps';
+import PhotoProps from '../types/photoProps';
 import { Link } from "react-router-dom";
 
 
-const ImageContainer: React.FC<photoProps> = (props: photoProps) => {
+const ImageContainer: React.FC<PhotoProps> = (props) => {
 
   return (
-    <Link to="/details" state={props}><img src={props.imgPath} id={`${props.photoId}`} alt="coming-soon"></img></Link>
+    <div className={`img-container-${props.componentName}`} id={`${props.componentName}-photo-${props.photoId}`}>
+      <Link to={"/details"} state={props}><img src={props.imgPath} id={`${props.photoId}`} alt="coming-soon"></img></Link>
+    </div>
   )
 }
 

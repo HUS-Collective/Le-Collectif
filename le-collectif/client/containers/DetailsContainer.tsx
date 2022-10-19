@@ -1,11 +1,11 @@
 import React from 'react'
-import photoProps from '../types/photoProps';
+import PhotoProps from '../types/photoProps';
 
-const DetailsContainer = (props: photoProps) => {
+const DetailsContainer = (props: PhotoProps) => {
   return (
-    <div>
+    <div className='details-name-price' id={`details-container-photo-${props.photoId}`}>
       <h2>{props.photoName}</h2>
-      <h3>{props.price}</h3>
+      <h3>${props.price}</h3>
     </div>
   )
 }

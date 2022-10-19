@@ -1,0 +1,35 @@
+#image-and-details-container {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    @include imgFit;
+    padding: 2rem;
+  }
+  @media (min-width: 725px) {
+    display: flex;
+    flex-direction: row; 
+  }
+}
+
+.details-page-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  color: whitesmoke;
+  font-family: $fanwoodText;
+}
+
+.details-title {
+  display: flex;
+  justify-content: center;
+}
+
+.details-name-price {
+  padding: 3rem;
+  width: 40%;
+}
+// @media (min-width: 725px) {
+//   display: grid;
+//   grid-template-rows: 1fr 1fr;
+// }
