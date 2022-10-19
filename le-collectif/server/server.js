@@ -4,6 +4,7 @@ const app = express();
 const PORT = 3000;
 const apiRouter = require("./routes/api.js");
 const adminRouter = require("./routes/admin.js");
+const cartRouter = require("./routes/cart.js");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 //route to api router
 app.use("/user", apiRouter);
 app.use("/admin", adminRouter);
+app.use("/cart", cartRouter);
 // app.use(express.static(path.resolve(__dirname, "../client")));
 
 if (process.env.NODE_ENV === "production") {
