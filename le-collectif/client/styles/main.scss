@@ -1,12 +1,16 @@
-// @import './abstracts/';
-@import './components/carousel';
+@import './abstracts/variables';
+@import './components/cart';
 @import './components/gallery';
-// @import './core/';
-// @import './layout/';
-@import './pages/page';
+@import './components/nav';
+@import './components/details';
+@import './components/carousel';
+// @import './core/*';
+// @import './layout/*';
+// @import './pages/*';
 // @import './themes/';
 
 
-div {
-  border: solid gray;
-}
+body {
+  background: $blackGradient;
+  padding: 0px;
+}   

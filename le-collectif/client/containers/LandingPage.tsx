@@ -3,11 +3,13 @@ import Carousel from "./Carousel";
 
 function LandingPage() {
 
-    return (
-        <div className="page-container" id='landing-page'>
-            <h1>Landing Page</h1>
-            < Carousel />
-        </div>
-    );
+  return (
+    <div className="page-container" id='landing-page'>
+      < Carousel />
+      <div id='landing-page-btn-container'>
+        <p>browse btn</p>
+      </div>
+    </div>
+  );
 }
 export default LandingPage;

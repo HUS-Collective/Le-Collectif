@@ -1,7 +1,11 @@
 const Nav = () => {
   return (
     <div id='nav-bar'>
-      <p>this is the nav bar</p>
+      <div id='logo'>
+        <h2>le collectif</h2>
+      </div>
+        <div id='nav-items'>
+      </div>  
     </div>
   )
 }

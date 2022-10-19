@@ -14,7 +14,7 @@ function App() {
       <LandingPage />
       <GalleryPage />
       <Details />
-      <Cart />
+      {/* <Cart /> */}
     </Fragment>
   );
 }

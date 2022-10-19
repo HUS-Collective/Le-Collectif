@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react'
+import CartContainer from '../components/CartContainer';
+import PaymentContainer from '../components/PaymentContainer';
 
-function Cart() {
+type Props = {}
 
-    return (
-        <div className="App">
-            <h1>Cart</h1>
-        </div>
-    );
+const Cart = (props: Props) => {
+  return (
+    <div className='cart-page'>
+      < CartContainer />  
+      < PaymentContainer />
+    </div>
+  )
 }
+
 export default Cart;

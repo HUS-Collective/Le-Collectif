@@ -1,13 +1,8 @@
 import React from 'react'
+import PhotoProps from '../types/photoProps'
 
-type Props = {
-  photoName: string,
-  price: number,
-  artistName: string,
-  count: number,
-}
 
-const GalleryImageDetails = (props: Props) => {
+const GalleryImageDetails = (props: PhotoProps) => {
   return (
     <div className='gallery-photo-info'> 
         <p>{props.photoName}</p>

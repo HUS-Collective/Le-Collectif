@@ -9,6 +9,7 @@ interface PhotoProps {
   count?: number;
   price?: number;
   s3Location?: string;
+  componentName?: string;
 }
 
 export default PhotoProps;

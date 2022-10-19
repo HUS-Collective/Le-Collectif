@@ -1,0 +1,14 @@
+#nav-bar {
+  z-index: 1;
+  font-family: $fanwoodText;
+  color: whitesmoke;
+  // background: $blackGradient;
+  height: 7vh;
+  width: 100%;
+  position: fixed;
+  padding: 1rem;
+    h2 {
+      margin: 0px;
+      font-size: 3rem;
+    }
+}

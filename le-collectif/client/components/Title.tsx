@@ -7,10 +7,10 @@ type Props = {
 
 const Title = (props: Props) => {
   return (
-    <div>
+    <div className='details-title'>
       <h1>{props.photoName}</h1>
-      <h3>{props.artistName}</h3>
-      </div>
+      {/* <h3>{props.artistName}</h3> */}
+    </div>
   )
 }
 
