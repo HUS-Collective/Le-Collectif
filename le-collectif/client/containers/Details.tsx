@@ -2,32 +2,41 @@ import React from "react";
 import Title from "../components/Title";
 import DetailsContainer from "./DetailsContainer";
 import ImageContainer from "./ImageContainer";
-import DATA from '../models/mockdata';
 import PhotoProps from "../types/photoProps";
+import { useLocation } from "react-router-dom";
+import { useEffect } from 'react'
+import Nav from "./Nav";
+import { ReactFragment } from "react";
 
+// in order to access the state passed down from the React Router link, we need useLocation
 
 // this will need props so it renders a specific image
 function Details(props: PhotoProps) {
-    // make this dynamic, replace staticData props
-    const staticData = DATA.PHOTOS[0];
-    console.log(staticData);  
+
+    const location = useLocation();
+    const state = location.state;
+  
+    useEffect(()=> {
+    }, [location])
+
   return (
     <div className="details-page-container">
+      < Nav />
       <Title 
-        photoName={staticData.photoName} 
-        artistName={staticData.artistName} />
+        photoName={state.photoName} 
+        artistName={state.artistName} />
       <div id='image-and-details-container'>
         <ImageContainer 
-          imgPath={staticData.imgPath}
-          photoName={staticData.photoName}
-          photoId={`${staticData.photoId}`}
-          key={staticData.photoId} 
+          imgPath={state.imgPath}
+          photoName={state.photoName}
+          photoId={`${state.photoId}`}
+          key={state.photoId} 
           componentName={'details'} />
         <DetailsContainer 
-          imgPath={staticData.imgPath}
-          photoName={staticData.photoName}
-          photoId={`${staticData.photoId}`}
-          price={staticData.price} />
+          imgPath={state.imgPath}
+          photoName={state.photoName}
+          photoId={`${state.photoId}`}
+          price={state.price} />
       </div>
     </div>
   );
